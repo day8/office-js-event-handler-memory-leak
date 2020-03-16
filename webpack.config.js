@@ -11,7 +11,7 @@ module.exports = async (env, options) => {
     devtool: "source-map",
     entry: {
       polyfill: "@babel/polyfill",
-      taskpane: "./src/taskpane/taskpane.js",
+      contentapp: "./src/contentapp/contentapp.js",
       commands: "./src/commands/commands.js"
     },
     resolve: {
@@ -43,14 +43,14 @@ module.exports = async (env, options) => {
     plugins: [
       new CleanWebpackPlugin(),
       new HtmlWebpackPlugin({
-        filename: "taskpane.html",
-        template: "./src/taskpane/taskpane.html",
-        chunks: ["polyfill", "taskpane"]
+        filename: "contentapp.html",
+        template: "./src/contentapp/contentapp.html",
+        chunks: ["polyfill", "contentapp"]
       }),
       new CopyWebpackPlugin([
         {
-          to: "taskpane.css",
-          from: "./src/taskpane/taskpane.css"
+          to: "contentapp.css",
+          from: "./src/contentapp/contentapp.css"
         }
       ]),
       new HtmlWebpackPlugin({
