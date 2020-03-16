@@ -6,6 +6,7 @@
 /* global console, document, Excel, Office */
 
 Office.onReady(info => {
+  console.info("v2");
   if (info.host === Office.HostType.Excel) {
     document.getElementById("sideload-msg").style.display = "none";
     document.getElementById("app-body").style.display = "flex";
@@ -13,23 +14,31 @@ Office.onReady(info => {
   }
 });
 
+async function batch(context) {
+  let sheet1 = context.workbook.worksheets.getItemOrNullObject("Sheet1");
+  await context.sync({"sheet1": sheet1, "context": context});
+  if (sheet1.isNullObject) {
+    let sheet1 = context.workbook.worksheets.add("Sheet1");
+    sheet1.visibility = Excel.SheetVisibility.hidden;
+    await context.sync();
+    console.info("Created new worksheet.")
+  } else {
+    console.info("Worksheet already exists.")
+  }
+}
+
+var previousContext = null;
+
 export async function run() {
   try {
-    await Excel.run(async context => {
-      /**
-       * Insert your Excel code here
-       */
-      const range = context.workbook.getSelectedRange();
-
-      // Read the range address
-      range.load("address");
-
-      // Update the fill color
-      range.format.fill.color = "yellow";
-
-      await context.sync();
-      console.log(`The range address was ${range.address}.`);
-    });
+    if (previousContext) {
+      await Excel.run(previousContext, batch);
+    } else {
+      await Excel.run(async context => {
+        previousContext = context;
+        await batch(context);
+      });
+    }
   } catch (error) {
     console.error(error);
   }
