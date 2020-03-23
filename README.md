@@ -1,5 +1,5 @@
 
-This repo provides a minimal demonstration of [office-js issue #1054](https://github.com/OfficeDev/office-js/issues/1054). 
+This repo provides a minimal demonstration of [office-js issue #1054](https://github.com/OfficeDev/office-js/issues/1054). It has been created using the Microsoft Yeoman office-js generator.
 
 
 ## To Show The Problem
