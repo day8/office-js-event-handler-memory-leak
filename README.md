@@ -37,7 +37,3 @@ This template supports debugging using any of the following techniques:
 
 * [Office add-in documentation](https://docs.microsoft.com/office/dev/add-ins/overview/office-add-ins)
 * More Office Add-in samples at [OfficeDev on Github](https://github.com/officedev)
-
-## Copyright
-
-Copyright (c) 2019 Microsoft Corporation. All rights reserved.
