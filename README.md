@@ -4,9 +4,22 @@ This repository contains the simplest Content Add-in that is possible to
 demonstrate that Content Add-ins effectively leak an alarming amount of memory
 for every single call to `Excel.run()`. 
 
-## JavaScript
+## Setup
 
-This template is written using JavaScript. For the [TypeScript](http://www.typescriptlang.org/) version of this template, go to [Office-Addin-TaskPane](https://github.com/OfficeDev/Office-Addin-TaskPane).
+1. Open a command prompt as administrator.
+2. `CheckNetIsolation LoopbackExempt -a -n="microsoft.win32webviewhost_cw5n1h2txyewy"` 
+3. Open a command prompt as your user.
+4. `git clone https://github.com/day8/office-js-memory-leak`
+5. `cd office-js-memory-leak`
+6. `npm install`
+7. `npm start`
+8. Excel should open automatically.
+9. Click 'Insert'
+10. Click 'My Add-ins down arrow' (the down arrow menu on the right, NOT the button on the left)
+11. Under 'Developer Add-ins' click 'Content Add-in Memory Leak'
+12. If you get the error "We can't open this add-in from localhost" quit Excel, run `npm stop` and go to 7.
+13. If the Content Add-in loads successfully resize it so that you can see the 'Run' button.
+14. Click the 'Run' button repeatedly.
 
 ## Debugging
 
@@ -15,12 +28,6 @@ This template supports debugging using any of the following techniques:
 - [Use a browser's developer tools](https://docs.microsoft.com/office/dev/add-ins/testing/debug-add-ins-in-office-online)
 - [Attach a debugger from the task pane](https://docs.microsoft.com/office/dev/add-ins/testing/attach-debugger-from-task-pane)
 - [Use F12 developer tools on Windows 10](https://docs.microsoft.com/office/dev/add-ins/testing/debug-add-ins-using-f12-developer-tools-on-windows-10)
-
-## Questions and comments
-
-We'd love to get your feedback about this sample. You can send your feedback to us in the *Issues* section of this repository.
-
-Questions about Microsoft Office 365 development in general should be posted to [Stack Overflow](http://stackoverflow.com/questions/tagged/office-js+API).  If your question is about the Office JavaScript APIs, make sure it's tagged with  [office-js].
 
 ## Additional resources
 
