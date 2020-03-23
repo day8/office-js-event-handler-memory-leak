@@ -1,12 +1,8 @@
-# Office-Addin-ContentApp-JS
 
-This repository contains the simplest Content Add-in that is possible to
-demonstrate that Content Add-ins effectively leak an alarming amount of memory
-for every single call to `Excel.run()`. 
+This repo provides a minimal demonstration of [office-js issue #1054](https://github.com/OfficeDev/office-js/issues/1054). 
 
-This is reported as [office-js issue #1054](https://github.com/OfficeDev/office-js/issues/1054).
 
-## Setup
+## To Show The Problem
 
 1. Open a command prompt as administrator.
 2. `CheckNetIsolation LoopbackExempt -a -n="microsoft.win32webviewhost_cw5n1h2txyewy"` 
@@ -23,4 +19,5 @@ This is reported as [office-js issue #1054](https://github.com/OfficeDev/office-
 13. If the Content Add-in loads successfully resize it so that you can see the 'Run' button.
 14. Open Windows Task Manager and observe the memory use of Excel
 15. Click the 'Run' button repeatedly.
-16. ![office-js 2020-03-20 13-44](https://user-images.githubusercontent.com/350450/77129910-a309a100-6aba-11ea-91b5-99abb5d4276f.gif)
+16. Observe the memory usage for Excel continuing to climb each time Run is clicked. 
+![office-js 2020-03-20 13-44](https://user-images.githubusercontent.com/350450/77129910-a309a100-6aba-11ea-91b5-99abb5d4276f.gif)
