@@ -24,16 +24,3 @@ This is reported as [office-js issue #1054](https://github.com/OfficeDev/office-
 14. Open Windows Task Manager and observe the memory use of Excel
 15. Click the 'Run' button repeatedly.
 16. ![office-js 2020-03-20 13-44](https://user-images.githubusercontent.com/350450/77129910-a309a100-6aba-11ea-91b5-99abb5d4276f.gif)
-
-## Debugging
-
-This template supports debugging using any of the following techniques:
-
-- [Use a browser's developer tools](https://docs.microsoft.com/office/dev/add-ins/testing/debug-add-ins-in-office-online)
-- [Attach a debugger from the task pane](https://docs.microsoft.com/office/dev/add-ins/testing/attach-debugger-from-task-pane)
-- [Use F12 developer tools on Windows 10](https://docs.microsoft.com/office/dev/add-ins/testing/debug-add-ins-using-f12-developer-tools-on-windows-10)
-
-## Additional resources
-
-* [Office add-in documentation](https://docs.microsoft.com/office/dev/add-ins/overview/office-add-ins)
-* More Office Add-in samples at [OfficeDev on Github](https://github.com/officedev)
