@@ -4,6 +4,8 @@ This repository contains the simplest Content Add-in that is possible to
 demonstrate that Content Add-ins effectively leak an alarming amount of memory
 for every single call to `Excel.run()`. 
 
+This is reported as [office-js issue #1054](https://github.com/OfficeDev/office-js/issues/1054).
+
 ## Setup
 
 1. Open a command prompt as administrator.
@@ -19,7 +21,9 @@ for every single call to `Excel.run()`.
 11. Under 'Developer Add-ins' click 'Content Add-in Memory Leak'
 12. If you get the error "We can't open this add-in from localhost" quit Excel, run `npm stop` and go to 7.
 13. If the Content Add-in loads successfully resize it so that you can see the 'Run' button.
-14. Click the 'Run' button repeatedly.
+14. Open Windows Task Manager and observe the memory use of Excel
+15. Click the 'Run' button repeatedly.
+
 
 ## Debugging
 
