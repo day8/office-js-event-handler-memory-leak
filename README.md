@@ -23,7 +23,7 @@ This is reported as [office-js issue #1054](https://github.com/OfficeDev/office-
 13. If the Content Add-in loads successfully resize it so that you can see the 'Run' button.
 14. Open Windows Task Manager and observe the memory use of Excel
 15. Click the 'Run' button repeatedly.
-
+16. ![office-js 2020-03-20 13-44](https://user-images.githubusercontent.com/350450/77129910-a309a100-6aba-11ea-91b5-99abb5d4276f.gif)
 
 ## Debugging
 
@@ -37,8 +37,6 @@ This template supports debugging using any of the following techniques:
 
 * [Office add-in documentation](https://docs.microsoft.com/office/dev/add-ins/overview/office-add-ins)
 * More Office Add-in samples at [OfficeDev on Github](https://github.com/officedev)
-
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information, see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
 ## Copyright
 
