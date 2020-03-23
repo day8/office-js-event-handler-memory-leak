@@ -12,7 +12,7 @@ This repo provides a minimal demonstration of [office-js issue #1054](https://gi
 6. `npm install`
 7. `npm start`
 8. Excel should open automatically.
-9. Click 'Insert'
+9. Click the 'Insert' menu item
 10. Click 'My Add-ins down arrow' (the down arrow menu on the right, NOT the button on the left)
 11. Under 'Developer Add-ins' click 'Content Add-in Memory Leak'
 12. If you get the error "We can't open this add-in from localhost" quit Excel, run `npm stop` and go to 7.
