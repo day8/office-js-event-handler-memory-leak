@@ -23,3 +23,9 @@ This repo provides a minimal demonstration of [office-js issue #1054](https://gi
 ![office-js 2020-03-20 13-44](https://user-images.githubusercontent.com/350450/77129910-a309a100-6aba-11ea-91b5-99abb5d4276f.gif)
 17. After clicking the button LOTS of times, notice how memory is just contnuing to rise unbounded
 18. Leave the app alone for 20 mins and notice that at some point the used memory returns to normal
+
+## Now look at the onclick handler
+
+When you click on that `run` button, the `onclick` handler is [this code](https://github.com/day8/office-js-memory-leak/blob/master/src/contentapp/contentapp.js#L16-L24).  It doesn't get any simpler. 
+
+
