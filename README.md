@@ -26,6 +26,8 @@ This repo provides a minimal demonstration of [office-js issue #1054](https://gi
 
 ## Now look at the onclick handler
 
-When you click on that `Run` button, the [`onclick`](https://github.com/day8/office-js-memory-leak/blob/master/src/contentapp/contentapp.js#L16-L24) handler is [this minimal code](https://github.com/day8/office-js-memory-leak/blob/master/src/contentapp/contentapp.js#L16-L24).  It doesn't get any simpler. 
+When you click on that `Run` button, the [`onclick`](https://github.com/day8/office-js-memory-leak/blob/master/src/contentapp/contentapp.js#L16-L24) handler is [this minimal function](https://github.com/day8/office-js-memory-leak/blob/master/src/contentapp/contentapp.js#L16-L24) which calls `Excel.run` with the simplest batch function possible. 
+
+Note: the more the batch function does with `context`, the more memory is leaked on each click of `Run`
 
 
