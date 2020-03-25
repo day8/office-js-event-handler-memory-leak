@@ -18,33 +18,66 @@
 
     <!-- Template styles -->
     <link href="contentpane.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        .ms-welcome__main {
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-direction: column;
+            flex-direction: column;
+            -webkit-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+            -webkit-align-items: center;
+            align-items: center;
+            -webkit-flex: 1 0 0;
+            flex: 1 0 0;
+            padding: 10px 20px;
+        }
+
+        .ms-welcome__main > h2 {
+            width: 100%;
+            text-align: center;
+        }
+
+        .ms-welcome__action.ms-Button--hero {
+            margin-top: 30px;
+        }
+
+        .ms-Button.ms-Button--hero .ms-Button-label {
+            color: #0078d7;
+        }
+
+        .ms-Button.ms-Button--hero:hover .ms-Button-label,
+        .ms-Button.ms-Button--hero:focus .ms-Button-label{
+            color: #005a9e;
+            cursor: pointer;
+        }
+
+        b {
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <body class="ms-font-m ms-welcome ms-Fabric">
-    <header class="ms-welcome__header ms-bgColor-neutralLighter">
-        <img width="90" height="90" src="../../assets/logo-filled.png" alt="Contoso" title="Contoso" />
-        <h1 class="ms-font-su">Welcome</h1>
-    </header>
     <section id="sideload-msg" class="ms-welcome__main">
         <h2 class="ms-font-xl">Please sideload your add-in to see app body.</h2>
     </section>
     <main id="app-body" class="ms-welcome__main" style="display: none;">
-        <h2 class="ms-font-xl"> Discover what Office Add-ins can do for you today! </h2>
-        <ul class="ms-List ms-welcome__features">
-            <li class="ms-ListItem">
-                <i class="ms-Icon ms-Icon--Ribbon ms-font-xl"></i>
-                <span class="ms-font-m">Achieve more with Office integration</span>
-            </li>
-            <li class="ms-ListItem">
-                <i class="ms-Icon ms-Icon--Unlock ms-font-xl"></i>
-                <span class="ms-font-m">Unlock features and functionality</span>
-            </li>
-            <li class="ms-ListItem">
-                <i class="ms-Icon ms-Icon--Design ms-font-xl"></i>
-                <span class="ms-font-m">Create and visualize like a pro</span>
-            </li>
-        </ul>
-        <p class="ms-font-l">Modify the source files, then click <b>Run</b>.</p>
+        <p class="ms-font-l">Repeatedly click <b>Run</b> and observe Excel memory usage increase.</p>
         <div role="button" id="run" class="ms-welcome__action ms-Button ms-Button--hero ms-font-xl">
             <span class="ms-Button-label">Run</span>
         </div>

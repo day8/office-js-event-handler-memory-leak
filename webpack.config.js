@@ -12,7 +12,6 @@ module.exports = async (env, options) => {
     entry: {
       polyfill: "@babel/polyfill",
       contentapp: "./src/contentapp/contentapp.js",
-      commands: "./src/commands/commands.js"
     },
     resolve: {
       extensions: [".ts", ".tsx", ".html", ".js"]
@@ -46,17 +45,6 @@ module.exports = async (env, options) => {
         filename: "contentapp.html",
         template: "./src/contentapp/contentapp.html",
         chunks: ["polyfill", "contentapp"]
-      }),
-      new CopyWebpackPlugin([
-        {
-          to: "contentapp.css",
-          from: "./src/contentapp/contentapp.css"
-        }
-      ]),
-      new HtmlWebpackPlugin({
-        filename: "commands.html",
-        template: "./src/commands/commands.html",
-        chunks: ["polyfill", "commands"]
       })
     ],
     devServer: {
